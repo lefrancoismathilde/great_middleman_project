@@ -1,0 +1,33 @@
+@keyframes myslideUp{
+  0% {
+    opacity: O;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes myslideUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes myslideUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.myslideUp {
+  opacity: 0;
+  animations: myslideUp 2s 0.5s ease forwards;
+  -webkit-keyframes: myslideUp 2s 0.5s ease forwards;
+  -moz-keyframes: myslideUp 2s 0.5s ease forwards;
+}
