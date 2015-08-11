@@ -1,0 +1,21 @@
+<div class="banner text-center padded" style="background-image: url('https://images.unsplash.com/photo-1433959352364-9314c5b6eb0b?q=80&fm=jpg&s=e3bfea02f099f5b8a177fa03f01fb46e')">
+  <h2>La team</h1>
+    <p>Motivation et détermination sont au rendez-vous</p>
+</div>
+
+<div class="container text-center padded">
+  <div class="row">
+    <% data.products.each do |product| %>
+      <div class="col-xs-6 col-sm-6 col-md-4">
+        <div class="team">
+          <%= image_tag product.image %>
+          <h3><%= product.name %></h3>
+          <p><%= product.role %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+

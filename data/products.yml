@@ -1,4 +1,15 @@
-- name: Some product
-  image: some_product.png
-- name: Other product
-  image: other_product.png
+- image: 'chinois.jpg'
+  name: 'Jack'
+  role: 'CEO'
+- image: 'people1.jpg'
+  name: 'John'
+  role: 'CTO'
+- image: 'people3.png'
+  name: 'Andrea'
+  role: 'Graphiste'
+- image: 'people2.jpg'
+  name: 'Rapha'
+  role: 'Administrateur'
+- image: 'ben.jpg'
+  name: 'Ben'
+  role: 'Secrétaire'

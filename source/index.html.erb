@@ -1,10 +1,145 @@
 ---
-title: Le Wagon Middleman boilerplate
+title: Le Wagon Middleman
 ---
+    <!-- Banner -->
 
-<div class="welcome text-center padded">
-  <h1>Middleman is Watching</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+    <div class="banner text-center" style="background-image: url('https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&fm=jpg&s=97cb7cd5e219e932365f3bcff3950eda')">
+
+      <h1>Startup Tools</h1>
+        <h2>Very cool stuff, useful and smart</h2>
+          <a class="btn btn-primary" href="#">GET IT</a>
+      <span class="banner-shadow"></span>
+    </div>
+
+    <div class="container padded">
+    <div class="row">
+    <div class="col-xs-12 col-md-3">
+      <div class="feature">
+        <h3>
+          <%= image_tag "chat.png" %>Discuss best tools
+        </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores sequi sed, odit tenetur? Necessitatibus ad nulla deleniti quis vel facere hic illum omnis expedita beatae aliquam quibusdam asperiores laborum, magni.</p>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-3">
+      <div class="feature">
+        <h3>
+          <%= image_tag "phone.png" %>Always is sync
+        </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores sequi sed, odit tenetur? Necessitatibus ad nulla deleniti quis vel facere hic illum omnis expedita beatae aliquam quibusdam asperiores laborum, magni.</p>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-3">
+      <div class="feature">
+        <h3>
+          <%= image_tag "search.png" %>Powerful search
+        </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores sequi sed, odit tenetur? Necessitatibus ad nulla deleniti quis vel facere hic illum omnis expedita beatae aliquam quibusdam asperiores laborum, magni.</p>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-3">
+      <div class="feature">
+        <h3>
+          <%= image_tag "heart.png" %>Share the love
+        </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores sequi sed, odit tenetur? Necessitatibus ad nulla deleniti quis vel facere hic illum omnis expedita beatae aliquam quibusdam asperiores laborum, magni.</p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+
+    <!-- Cards -->
+    <div class="title-class text-center">
+      <h2>Most Popular</h2>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+        <div class="card">
+          <span class="card-bg" style="background-image: url(http://www.wingsunfurled-web.com/france/rhone-alpes/_images/ardeche-paysage.jpg)"></span>
+          <span class="card-description">POPULAR</span>
+          <span class="card-text">
+            <h3>Trello</h3>
+            <p>Very cool stuff, useful and smart</p>
+          </span>
+          <span class="card-user">
+              <%= image_tag "people3.png", class: "avatar avatar-bordered" %>
+          </span>
+          <a href="#" class="card-link"></a>
+        </div>
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+        <div class="card">
+          <span class="card-bg" style="background-image: url(http://auto.img.v4.skyrock.net/4251/16704251/pics/2298335157_small_1.jpg)"></span>
+          <span class="card-description">POPULAR</span>
+          <span class="card-text">
+            <h3>Intercom</h3>
+            <p>Very cool stuff, useful and smart</p>
+          </span>
+          <span class="card-user">
+              <%= image_tag "people2.jpg", class: "avatar avatar-bordered" %>
+          </span>
+          <a href="#" class="card-link"></a>
+        </div>
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+        <div class="card">
+          <span class="card-bg" style="background-image: url(http://www.lightexmachina.com/Event/Oenovideo-2014-05/i-X27MQvr/0/S/2014-05-31_LXM_Oenovideo_110208-S.jpg)"></span>
+          <span class="card-description">POPULAR</span>
+          <span class="card-text">
+            <h3>Mixpanel</h3>
+            <p>Very cool stuff, useful and smart</p>
+          </span>
+          <span class="card-user">
+              <%= image_tag "people1.jpg", class: "avatar avatar-bordered" %>
+          </span>
+          <a href="#" class="card-link"></a>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Newsletter -->
+    <div class="newsletter text-center padded">
+      <h2>Get news from us</h2>
+        <p>Leave us your mail and get stylus news</p>
+      <form class="form-inline">
+        <input type="email" class="form-control" placeholder="bob@gmail.com">
+        <input type="submit" class="btn btn-primary btn-bordered btn-bordered-primary" value="Subscribe">
+      </form>
+    </div>
+
+    <!-- Map -->
+
+    <div id="map" style="width: 100%; height: 400px;"></div>
+
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+      <script type="text/javascript">
+      var myLatlng = new google.maps.LatLng(48.852937,2.364178);
+
+      var myOptions = {
+        zoom: 16,
+        center: myLatlng,
+        scrollwheel: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: [[{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"water","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#C6E2FF"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#C5E3BF"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#D1D1B8"}]}]]
+      };
+
+      var map = new google.maps.Map(document.getElementById('map'), myOptions);
+      var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: "You are here!"
+      });
+      </script>
+
+
